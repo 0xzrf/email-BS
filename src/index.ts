@@ -7,7 +7,6 @@ dotenv.config();
 
 const app = express();
 
-
 const EMAIL_JOON = process.env.EMAIL_JOON;
 const EMAIL_JOON_PASSWORD = process.env.EMAIL_JOON_PASSWORD;
 const EMAIL_AMOR = process.env.EMAIL_AMOR;
@@ -16,6 +15,7 @@ const EMAIL_AMOR = process.env.EMAIL_AMOR;
 const corsOptions = {
     origin: ['*'],
     methods: ['POST'],
+    allowedHeaders: ['Content-Type'],
 };
 
 app.use(cors(corsOptions));
